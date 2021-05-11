@@ -14,6 +14,8 @@
            $password = mysqli_real_escape_string($connect, $_POST["password"]);  
            $Confpass = mysqli_real_escape_string($connect, $_POST["confirmpassword"]);
            $email = mysqli_real_escape_string($connect, $_POST['email']);
+
+          
         //   $password = password_hash($password, PASSWORD_DEFAULT);  
         $res= mysqli_query($connect,"select * from users where username='$username' ");
         if(mysqli_num_rows($res)>0){

@@ -11,6 +11,18 @@ session_start();
  }  
  ?> 
  
+ <?php
+
+
+if( isset($_POST['status'])){
+
+    $conn=mysqli_connect('localhost','root','','test');
+    $st=mysqli_real_escape_string($conn, $_POST["status"]);
+    $_SESSION['st']=$st;
+    echo "<script>alert($st)</script>";
+}
+   
+ ?>
  
 
   
@@ -99,6 +111,7 @@ session_start();
    <th> Address </th>
    <th> Status </th>
    <th> Action </th>
+  
    
    
    
@@ -131,40 +144,66 @@ session_start();
                      $status=$row['order_status'];
                      $pro=$row['p_name'];
                     $order_id=$row['order_id'];
-                    
-
+                    $o_id=$row['odr_Id'];
+              
             
               echo"
-                  <form method='post'>
+        
 
-                     <tr class='cross'>
+               <tr class='cross'>
+               <form method='get' action='checkout3.php'>
 
                      <td>$srno</td>         
-                     <td>$tranid</td> 
+                     <td>   <input type='text' name='tranid' value ='$tranid'  class='form-control' style='width: 230px; height: 35px;' placeholder='Transaction Id' required/></td> 
                      <td style='color:darkpink'><b>$name</b> </td>
                      <td>$pro</td> 
                     
                      <td>$Add </td>  
-                     <td>$status </td>  
-                         
-                          
-                           <td>  
-                                 <a href='checkout3.php?ordr_product_id=$srno,ordrid=$order_id'>
-                                 <input type='button'  value ='Delete'  class='btn btn-danger' style='width:100%' />
-                                 </a>
-                           </td>
+                     <td >
+             
+                          <div align='center'>
+                                    <select  class='form-control' name='status' style='width: 100px; height: 35px;'  placeholder=' Choose interger for electric,furniture or clothes category,' required>
+                                    
+                                    <option selected>Completed</option>
+                                    <option selected>Processing</option>
+                                    <option selected>Refunded</option>
+                                    <option selected>Canceled</option>
+                                    <option selected>Failed</option>
+                                    <option selected>Pending Payment</option>
+                                    <option selected></option>
+                                    
+
+                                
+                                </select>
+                          </div>
+            
+                      
+                     </td>  
+
+                     <td>  
                            
+                            <input type='submit'  name='$order_id' value ='Update'  class='btn btn-danger' style='width:100%' />
+                           
+                     </td> 
                         
-                     </tr>
                            
-                  </form>
+            </form>  
+            
+                </tr>
+                           
+         
               
               
               ";
 
+
+
               }
               
           }
+
+          
+                    
 
              ?>
    

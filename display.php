@@ -341,9 +341,14 @@ function reset() {
 </style>
 
   <?php 
-$conn = mysqli_connect("localhost","root","","test");
 
-$res=mysqli_query($conn, "select * from product,category where p_category=cat_id ");
+  $conn = mysqli_connect("localhost","root","","test");
+
+  if(isset($_GET['id'])){
+      $catid=$_GET['id'];
+
+      
+$res=mysqli_query($conn, "select * from product,category where p_category=$catid and p_category=cat_id ");
 if(mysqli_num_rows($res)>0){
 
   while($row=mysqli_fetch_array($res)){
@@ -396,6 +401,9 @@ if(mysqli_num_rows($res)>0){
   }
 
 }
+
+  }
+
 
 ?>
 

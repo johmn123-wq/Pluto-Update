@@ -270,22 +270,22 @@ if(!mysqli_query($connect,$sql))
     <br>
     <form class="form" method="post">
     <div class="ha">
-    <p>Street Address</p><input type="text" name="street_address" placeholder="Street address">
+    <p>Street Address</p><input type="text" name="street_address" placeholder="Street address" required>
       </div>
       <div class="ha">
-        <p>City</p><input type="text" name="city" placeholder="City">
+        <p>City</p><input type="text" name="city" placeholder="City" required>
       </div>
       <div class="ha">
-       <p>State</p> <input type="text" name="state" placeholder="State">
+       <p>State</p> <input type="text" name="state" placeholder="State" required>
       </div>
       <div class="ha">
-        <p>Country</p><input type="text" name="country" placeholder="Country">
+        <p>Country</p><input type="text" name="country" placeholder="Country" required>
       </div>
       <div class="ha">
-        <p>Landmark</p><input type="text" name="landmark" placeholder="Landmark">
+        <p>Landmark</p><input type="text" name="landmark" placeholder="Landmark" required>
       </div>
       <div class="ha">
-        <p>Postcode</p><input type="text" name="postcode" placeholder="Postcode">
+        <p>Postcode</p><input type="text" name="postcode" placeholder="Postcode" required>
       </div>
       <br><br>
 
@@ -293,13 +293,13 @@ if(!mysqli_query($connect,$sql))
     <h2>Pay with Credit Card</h2>
     <br>
       <div class="ha1">
-        <p>First Name</p><input type="text" name="first_name" placeholder="First Name" >
+        <p>First Name</p><input type="text" name="first_name" placeholder="First Name" required>
       </div>
       <div class="ha1">
-        <p>Last Name</p><input type="text" name="last_name" placeholder="Last Name">
+        <p>Last Name</p><input type="text" name="last_name" placeholder="Last Name" required>
       </div>
       <div class="ha1">
-        <p>Credir Card Number</p><input type="text" name="credit_card_number" placeholder="Credit Card Number" >
+        <p>Credir Card Number</p><input type="text" name="credit_card_number" placeholder="Credit Card Number" required>
       </div>
       <div class="ha1">
         <p class="shift_me">Payment Type</p>
@@ -317,13 +317,13 @@ if(!mysqli_query($connect,$sql))
         <div class="small">
           <ul class="make">
             <div>
-            <li><input type="text" name="month" placeholder="mm" ></li>
+            <li><input type="text" name="month" placeholder="mm" required ></li>
             <li>/</li>
-            <li><input type="text" name="year" placeholder="yy" ></li>
+            <li><input type="text" name="year" placeholder="yy" required></li>
           </div>
           <div>
             <li>CSC</li>
-            <li><input type="text" name="csc" placeholder="CSC" ></li>
+            <li><input type="text" name="csc" placeholder="CSC" required></li>
           </div>
           </ul>
         </div>

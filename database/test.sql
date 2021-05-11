@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 02, 2021 at 07:57 PM
+-- Generation Time: May 11, 2021 at 08:13 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -39,7 +39,8 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`admin_id`, `adm_name`, `adm_pass`, `adm_email`) VALUES
-(1, 'admin', 'admin', 'admin@gmail.com');
+(1, 'admin', 'admin', 'admin@gmail.com'),
+(2, 'RedCheif', 'Red', 'red@red.red');
 
 -- --------------------------------------------------------
 
@@ -73,32 +74,12 @@ INSERT INTO `brand` (`brand_id`, `brand_name`) VALUES
 --
 
 CREATE TABLE `cart` (
-  `cart_id` int(255) NOT NULL,
+  `cart_id` int(200) NOT NULL,
   `pro_id` int(255) NOT NULL,
   `ip_address` varchar(255) NOT NULL,
   `user_id` varchar(70) NOT NULL,
   `qty` int(70) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `cart`
---
-
-INSERT INTO `cart` (`cart_id`, `pro_id`, `ip_address`, `user_id`, `qty`) VALUES
-(1, 2, '::1', '3', 1),
-(2, 3, '::1', '2', 1),
-(3, 2, '::1', '2', 1),
-(4, 3, '::1', '3', 1),
-(5, 4, '::1', '3', 1),
-(6, 8, '::1', '3', 1),
-(7, 14, '::1', '3', 1),
-(8, 15, '::1', '3', 1),
-(9, 16, '192.168.56.1', '3', 1),
-(10, 4, '192.168.56.1', '2', 1),
-(11, 17, '192.168.56.1', '2', 1),
-(12, 1, '192.168.56.1', '5', 1),
-(13, 13, '192.168.56.1', '5', 1),
-(14, 3, '192.168.56.1', '5', 1);
 
 -- --------------------------------------------------------
 
@@ -124,11 +105,56 @@ INSERT INTO `category` (`cat_id`, `category_name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `order`
+--
+
+CREATE TABLE `order` (
+  `order_id` int(200) NOT NULL,
+  `user_id` int(100) NOT NULL,
+  `tran_id` varchar(100) NOT NULL,
+  `order_status` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ordered_products`
+--
+
+CREATE TABLE `ordered_products` (
+  `ordered_pro_id` int(200) NOT NULL,
+  `ordr_id` int(100) NOT NULL,
+  `usr_id` int(20) NOT NULL,
+  `product_id` int(30) NOT NULL,
+  `qty` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order_info`
+--
+
+CREATE TABLE `order_info` (
+  `odr_Id` int(200) NOT NULL,
+  `user_Id` int(11) NOT NULL,
+  `total_Amt` varchar(200) NOT NULL,
+  `card_holder_name` varchar(20) NOT NULL,
+  `credit_card_no` varchar(20) NOT NULL,
+  `exp_date` varchar(20) NOT NULL,
+  `cvv` varchar(20) NOT NULL,
+  `Shipping_Add` varchar(20) NOT NULL,
+  `order_date` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `product`
 --
 
 CREATE TABLE `product` (
-  `p_id` int(255) NOT NULL,
+  `p_id` int(200) NOT NULL,
   `p_category` int(255) NOT NULL,
   `p_brand` int(255) NOT NULL,
   `p_name` varchar(30) NOT NULL,
@@ -141,23 +167,26 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`p_id`, `p_category`, `p_brand`, `p_name`, `p_price`, `p_image`) VALUES
-(1, 2, 5, 'Bedroom Sheet', 3499, 'bedroom-furniture-250x250.jpg'),
-(2, 2, 6, 'Asain - Furniture', 4999, 'asian-furniture-250x250.jpg'),
-(3, 2, 6, 'Single Bed', 7499, 'f4.jpg'),
-(4, 2, 5, 'Table & Chairs', 1999, 'amer-furniture.jpg'),
-(5, 3, 4, 'Men\'s Black Shirt', 399, 'dress_shirt_PNG.png'),
-(6, 3, 3, 'Ladies Casual Dress ', 899, '7475-ladies-casual-dresses-summer-two-colors-pleated.jpg'),
-(7, 3, 3, 'Black Coat ', 2599, 'pm13.jpg'),
-(8, 3, 4, 'Black Jeans', 2599, 'pt5.jpg'),
-(9, 1, 1, 'Headphone', 59999, 'product051.png'),
-(10, 1, 1, 'Iphone 6', 85000, 'http___pluspng.com_img-png_iphone-6s-png-iphone-6s-gold-64gb-1000.png'),
-(11, 1, 1, 'Macbook Air ', 1500000, 'product03.png'),
-(12, 1, 2, 'Samsung Ipad', 10000, 'ipad_sam.jpg'),
-(13, 1, 2, 'Samsung S21', 76999, 'sams21.jpg'),
-(14, 4, 8, 'Refrigerator', 15999, 'Home Appliancesll.jpg'),
-(15, 4, 7, 'Iron', 4999, 'iron2.jpg'),
-(16, 4, 7, 'Mixer Grinder', 3999, 'singer-mixer-grinder-mg-46-medium_4bfa018096c25dec7ba0af40662856ef.jpg'),
-(17, 4, 8, 'Washing Machine', 7999, 'washing 012.jpg');
+(1, 2, 5, 'Bedroom Sheet', 199, 'bed21.jpg'),
+(2, 2, 6, 'Asain - Study Table', 139, 'studyTable.png'),
+(3, 2, 6, 'Luxurious Sofa', 179, 'sofa4_up.jpg'),
+(4, 2, 5, 'Table & Chairs', 149, 'tablechair.jpg'),
+(5, 3, 3, 'Ladies Casual Dress ', 49, '7475-ladies-casual-dresses-summer-two-colors-pleated.jpg'),
+(6, 3, 4, 'Black Jeans', 79, 'pt5.jpg'),
+(7, 1, 1, 'Iphone 6', 999, 'iphone3.jpg'),
+(8, 1, 1, 'Macbook Air ', 1999, 'macbook1.png'),
+(9, 1, 2, 'Samsung Ipad', 339, 'ipad_sam.jpg'),
+(10, 1, 2, 'Samsung S21', 1199, 'sams21.jpg'),
+(11, 4, 8, 'Refrigerator', 259, 'Home Appliancesll.jpg'),
+(12, 4, 7, 'Iron', 69, 'iron2.jpg'),
+(13, 4, 7, 'Mixer Grinder', 63, 'singer-mixer-grinder-mg-46-medium_4bfa018096c25dec7ba0af40662856ef.jpg'),
+(14, 4, 8, 'Washing Machine', 786, 'washing 012.jpg'),
+(15, 3, 5, 'Black Lace Dress', 399, 'women casual5.jpg'),
+(16, 2, 6, 'Asian - Bed', 599, 'bedroom4.jpg'),
+(17, 3, 5, 'Shirt and Pant', 89, 'clothes1.jpg'),
+(18, 1, 2, 'Headphone', 299, 'product05.png'),
+(19, 1, 1, 'Iphone 12 ', 1499, 'iphone1.jpg'),
+(20, 3, 5, 'Ladies Partywear', 499, 'women casual.webp');
 
 -- --------------------------------------------------------
 
@@ -166,7 +195,7 @@ INSERT INTO `product` (`p_id`, `p_category`, `p_brand`, `p_name`, `p_price`, `p_
 --
 
 CREATE TABLE `users` (
-  `user_id` int(255) NOT NULL,
+  `user_id` int(200) NOT NULL,
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL
@@ -177,11 +206,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `username`, `password`, `email`) VALUES
-(1, 'Priyansh', '456', 'kn@Nk'),
-(2, 'Ayan', '456', 'kn@Nk'),
-(3, 'Riya', 'querty', 'asd@dffd'),
-(4, 'Prakhar', 'gfg', 'asae@JNj'),
-(5, 'Rishabh', 'dfg', 'djfn@hn');
+(1, 'Lana', '786', 'xxx@xxx.com');
 
 --
 -- Indexes for dumped tables
@@ -212,6 +237,24 @@ ALTER TABLE `category`
   ADD PRIMARY KEY (`cat_id`);
 
 --
+-- Indexes for table `order`
+--
+ALTER TABLE `order`
+  ADD PRIMARY KEY (`order_id`);
+
+--
+-- Indexes for table `ordered_products`
+--
+ALTER TABLE `ordered_products`
+  ADD PRIMARY KEY (`ordered_pro_id`);
+
+--
+-- Indexes for table `order_info`
+--
+ALTER TABLE `order_info`
+  ADD PRIMARY KEY (`odr_Id`);
+
+--
 -- Indexes for table `product`
 --
 ALTER TABLE `product`
@@ -231,7 +274,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `admin_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `admin_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `brand`
@@ -243,7 +286,7 @@ ALTER TABLE `brand`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `cart_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `cart_id` int(200) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -252,16 +295,34 @@ ALTER TABLE `category`
   MODIFY `cat_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT for table `order`
+--
+ALTER TABLE `order`
+  MODIFY `order_id` int(200) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `ordered_products`
+--
+ALTER TABLE `ordered_products`
+  MODIFY `ordered_pro_id` int(200) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `order_info`
+--
+ALTER TABLE `order_info`
+  MODIFY `odr_Id` int(200) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `p_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `p_id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `user_id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
