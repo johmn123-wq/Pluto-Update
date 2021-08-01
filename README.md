@@ -10,4 +10,4 @@
 
 **Password:** 786
 
-!(alt text)(https://github.com/johmn123-wq/Pluto-Update/tree/master/back_images/rk1 (9).jpg)
+!(alt text)(https://github.com/johmn123-wq/Pluto-Update/tree/master/back_images/abs.jpg)
