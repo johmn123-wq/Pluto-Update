@@ -2,7 +2,7 @@
 
 **Language and Technology**: PHP, HTML, CSS, JS & MySQL
 
-**Wepage Link**: http://pluto-update.epizy.com/Pluto-Update-master/index.html
+**Wepage Link**: [Link](http://pluto-update.epizy.com/Pluto-Update-master/index.html)
 
 **Login Details:** 
 
