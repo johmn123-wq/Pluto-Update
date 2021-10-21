@@ -1,15 +1,21 @@
-**A Realtime Customer-Seller intraction ecommerce website that make it possible to create a virtual shopping environment for users such as Amazon.com.**
+<h1 align='center'>Online Shopping Store</h1>
 
-**Language and Technology**: PHP, HTML, CSS, JS & MySQL
+- An Ecommerce website designed in HTML, CSS and PHP.
 
-**Wepage Link**: [Link](http://pluto-update.epizy.com/Pluto-Update-master/index.html)
+## About the Website
 
-**Login Details:** 
+ - A Realtime Customer-Seller intraction ecommerce website that make it possible to create a virtual shopping environment for users such as Amazon.com.
+- <b>Language and Technology: </b> PHP, HTML, CSS, JS & MySQL
+- <b>Author Name :</b> Ritk Kumar(me) & Vikram Singh
 
-**Username:** Ana
+- <b>Website link :</b>[Click here🎉](http://pluto-update.epizy.com/Pluto-Update-master/index.html)
 
-**Password:** 786
+- <b>Login Details: </b> 
+- Username: Ana 
+- Password: 786 
 
 ![](back_images/uprk1%20(2).jpg)
 ![](back_images/rk1%20(9).jpg)
+
+
 
