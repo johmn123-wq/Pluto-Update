@@ -11,8 +11,9 @@
 - <b>Website link :</b>[Click here🎉](http://pluto-update.epizy.com/Pluto-Update-master/index.html)
 
 - <b>Login Details: </b> 
-- Username: Ana 
-- Password: 786 
+  - Username: Ana 
+  - Password: 786 
+  - http://localhost/oss-vikram/pluto-update/index.html
 
 ![](back_images/uprk1%20(2).jpg)
 ![](back_images/rk1%20(9).jpg)
