@@ -86,6 +86,80 @@ if(isset($_GET['addtocart'])){
   }
           </style>
 
+<!-- testimonial and brands style -->
+<style>
+                
+        .line{
+          width: 70%;
+          height: 3px;
+          background-color: rgb(255, 76, 48);
+          transform: translate(21%,-20%);
+          margin-top:50px;
+        }
+
+
+/*-----------------------------testimonial--------------------------------*/
+
+        .testimonial{
+          padding-top: 3rem;
+          margin-left: 22rem;
+        }
+        .testimonial .col-3{
+          text-align: center;
+          padding: 6rem 2rem;
+          box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+          cursor: pointer;
+          transition: transform 0.5s;
+          margin-left: 2rem;
+        }
+        .testimonial .col-3 img{
+          width: 50px;
+          margin-top: 2rem;
+          border-radius: 50%;
+        }
+        .testimonial .col-3:hover{
+          transform: translateY(-10px);
+        }
+        .testimonial .col-3 p{
+          font-size: 1.1rem;
+          margin: 1.2rem 0;
+          color: #777;
+        }
+        .testimonial .col-3 h3{
+          padding-top: 1rem;
+        }
+        .fa.fa-quote-left{
+          font-size: 2rem;
+          color: #ff523b;
+        }
+
+        /*-------------------------------brands------------------------------------*/
+
+        .brands{
+          margin: 7rem auto;
+        }
+        .col-5{
+          width: 10rem;
+          margin: 2rem;
+        }
+        .col-5 img{
+          width: 100%;
+          cursor: pointer;
+          filter: grayscale(100%);
+        }
+        .col-5 img:hover{
+          filter: grayscale(0);
+        }
+
+
+</style>
+
+
+
+
+
+
+
           <!-- footr style -->
           <style>
           
@@ -312,9 +386,9 @@ function reset() {
 
 <style>
 .setinline{
-   display:inline;
-   padding :  2rem;
-   float:left;
+   display: inline;
+   padding : 2rem;
+   float : left;
    margin: 1rem;
    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
   transition: transform 0.5s;
@@ -362,7 +436,7 @@ if(mysqli_num_rows($res)>0){
         <div class='setinline'> 
         <a href='product_details.php?p=$pro_id'><div class='product'>
         <div class='product-img'>
-          <img src='images/$pro_image' style='max-height: 170px;' alt='$cat_name'>
+          <img src='images/$pro_image' style='max-height: 170px;' alt='$pro_cat'>
         </div>
         </a>
         <div class='product-body' style='text-align:center'>
@@ -399,11 +473,83 @@ if(mysqli_num_rows($res)>0){
 
 ?>
 
-
-
   </div>
  
+ 
+<div class="line"></div>
+<br><br>
+<!--    testimonial -->
 
+
+<div class="testimonial" >
+    <div class="small-container" >
+      <div class="row">
+        <div class="col-3">
+          <i class="fa fa-quote-left"></i>
+          <p><b>I am so glad, to be a part of this amazing RedStore. It's been 5 years now and i didn't received any bad product. Like the best online shopping website ever.</b></p>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+          </div>
+          <img src="images1/user-1.png">
+          <h3><b>Sean Parker</b></h3>
+        </div>
+        <div class="col-3">
+          <i class="fa fa-quote-left"></i>
+          <p><b>To be honest, I have been wasting time doing shoping from stores. It's so bazzared and frustrated at the same time. Now my life is so easy seriously Thanking you.</b></p>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <img src="images1/user-2.png">
+          <h3><b>Dev Roy</b></h3>
+        </div>
+        <div class="col-3">
+          <i class="fa fa-quote-left"></i>
+          <p><b>I never liked to shop from Online shopping websites. It's is easy isn't it, I never trusted one until i became a member of this fantastic online shop. Every Product I have bough is same as they show in pictures, so satisfied.</b></p>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+          </div>
+          <img src="images1/user-3.png">
+          <h3><b>Hermioni Granger</b></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-----------------------------brands------------------------------------------------>
+
+  <div class="brands">
+    <div class="small-container">
+      <div class="row">
+        <div class="col-5">
+          <img src="images1/logo-godrej.png">
+        </div>
+        <div class="col-5">
+          <img src="images1/logo-oppo.png">
+        </div>
+        <div class="col-5">
+          <img src="images1/logo-coca-cola.png">
+        </div>
+        <div class="col-5">
+          <img src="images1/logo-paypal.png">
+        </div>
+        <div class="col-5">
+          <img src="images1/logo-philips.png">
+        </div>
+      </div>
+    </div>
+  </div>
 
 <!--footer-->
 

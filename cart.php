@@ -99,6 +99,8 @@ if($sql){
                <a class="dropdown-item" href="logout.php">Logout</a>
          </li>
         </ul>
+
+        
       </li>
       
       
@@ -335,12 +337,19 @@ nav .logo{
                          
                     }
                    
-                    echo "Total Amount: ".$total. "$";  
-                    echo" 
-                    <a href='transaction.php'> <button class='btn btn-warning'> Buy </button></a>
-                    <a href='cart.php?remove=$code'> <button class='btn btn-danger'> Remove all items </button></a>
-
-                    ";
+                    echo " 
+                    <div align='center'>
+                            <h3>Total Amount: $total$
+                                
+                            <a href='transaction.php'> <button class='btn btn-warning' style='align:center;margin-top: 3px;width:40px;height:28px;font-size:15px;margin-left:30px;'> Buy </button></a>
+                            <a href='cart.php?remove=$code'> <button class='btn btn-danger' style='text-align:center;margin-top: 3px;width:150px;height:28px;font-size:15px;'> Remove all items </button></a>
+              
+                           </h3>
+                            
+                    </div>
+                   
+                    ";  
+                  
 
              }
 

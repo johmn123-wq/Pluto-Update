@@ -88,12 +88,17 @@
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
           <li><a class="dropdown-item" href="index.php">Profile</a></li>
-          <li><a class="dropdown-item" href="cart.php">My Cart</a></li>
+         
           <li><a class="dropdown-item" href="#">History</a></li>
           <li><hr class="dropdown-divider"></li>
           <li><a class="dropdown-item" href="forget_pas.php">Forget Password</a></li>
           <li><a class="dropdown-item" href="logout.php">Logout</a></li>
         </ul>
+
+        <li>
+      <a class="nav-link" href="cart.php" style="margin-right:20px">  <img src="images/cart5.png" style="width:30px; height:30px;background:black;border-radius:50%"> </a>
+  
+      </li>
       </li>
 
     </div>

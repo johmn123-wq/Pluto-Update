@@ -1,6 +1,7 @@
 <?php
 $count=1;
 session_start();
+
 if(!isset($_SESSION["username"])){
     header("location:index.html?action=login");
   
@@ -46,7 +47,7 @@ $_SESSION['Add']=$Address;
   $fname = mysqli_real_escape_string($connect, $_POST["first_name"]);
   
 $password=rand();
-$tran_id = substr(password_hash($password, PASSWORD_DEFAULT),40);
+$tran_id = password_hash($password, PASSWORD_DEFAULT);
 
 
 //order_info
@@ -330,7 +331,7 @@ if(!mysqli_query($connect,$sql))
       </div>
       <div class="ha1">
          
-  <input type='submit'  name='submit' value='Make Payment'>  
+     <a href = "payment/payment.php"> <input type='submit'  name='submit' value='Make Payment'>  </a> 
      
       </div>
     </form>

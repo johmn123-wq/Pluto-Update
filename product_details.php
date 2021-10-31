@@ -165,11 +165,13 @@ ul{
             products
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Electronics</a></li>
+          <li><a class="dropdown-item" href="display.php?id=1">Electronics</a></li>
            
-            <li><a class="dropdown-item" href="#">Furnitures</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Clothing</a></li>
+           <li><a class="dropdown-item" href="display.php?id=2">Furnitures</a></li>
+          <!-- <li><hr class="dropdown-divider"></li>   -->
+           <li><a class="dropdown-item" href="display.php?id=3">Clothing</a></li>
+           <li><a class="dropdown-item" href="display.php?id=4">Home Appliances</a></li>
+
           </ul>
         </li>
       </ul>
@@ -398,7 +400,7 @@ if(mysqli_num_rows($res)>0){
 
            
              <h4 class='product-price header-cart-item-info' style='margin-top:20px' >
-             Lorem ipsum dolor sit amet, consectetur <br>adipisicing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut<br> enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+             Lorem ipsum dolor sit amet, consectetur adipisicing  elit, <br>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim minim <br> ad  veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
              </h4>
              
         </div>
