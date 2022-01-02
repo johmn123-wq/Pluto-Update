@@ -15,8 +15,10 @@
   - Password: 786 
   - http://localhost/oss-vikram/pluto-update/index.html
 
-![](back_images/uprk1%20(2).jpg)
-![](back_images/rk1%20(9).jpg)
+![](back_images/Screenshot%20(150).png)
+![](back_images/Screenshot%20(168).png)
+![](back_images/Screenshot%20(169).png)
+![](back_images/Screenshot%20(168).png)
 
 
 
