@@ -5,7 +5,7 @@
 ## About the Website
 
  - A Realtime Customer-Seller intraction ecommerce website that make it possible to create a virtual shopping environment for users such as Amazon.com.
-- <b>Language and Technology: </b> PHP, HTML, CSS, JS & MySQL
+- <b>Language and Technology: </b> PHP, HTML, CSS, JS/Bootstrap & MySQL
 - <b>Author Name :</b> Ritk Kumar(me) & Vikram Singh
 
 - <b>Website link :</b>[Click here🎉](http://pluto-update.epizy.com/Pluto-Update-master/index.html)
