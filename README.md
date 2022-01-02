@@ -16,8 +16,8 @@
   - http://localhost/oss-vikram/pluto-update/index.html
 
 ![](back_images/Screenshot%20(150).png)
-![](back_images/Screenshot%20(168).png)
-![](back_images/Screenshot%20(169).png)
+![](back_images/Screenshot%20(163).png)
+![](back_images/Screenshot%20(166).png)
 ![](back_images/Screenshot%20(168).png)
 
 
