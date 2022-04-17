@@ -1,5 +1,7 @@
  <?php  
- $connect = mysqli_connect("sql309.epizy.com", "epiz_29241717", "6hSvun9utmSWwyM", "epiz_29241717_Shopping");  
+//  $connect = mysqli_connect("sql309.epizy.com", "epiz_29241717", "6hSvun9utmSWwyM", "epiz_29241717_Shopping");  
+ $connect = mysqli_connect("localhost", "root", "", "test");
+
  session_start();  
 
  
