@@ -8,9 +8,6 @@ the user.
 I've Implemented backend part and features like user Authentication, search products by catagory or brands, invoice generation, 
 checking order history, sending confirmation email after payment etc.
 
-## Import Data
-I have included a data folder in this repo. Inside that folder will be 2 folders called cart and item. These 2 folders contain a mongodump of the 2 collections that I use in this ecommerce demo. You can use the [import-data.sh](data/import-data.sh) script to import these 2 dumps to an ecommerce database, then you will have the same content that I have for this demo.
-
 ## Live Demonstration
 
 The E-commerce demo can be [viewed online here](http://pluto-update.epizy.com/Pluto-Update-master/index.html).
@@ -61,19 +58,12 @@ Here are screenshots that show the E-commerce demo application in use.
 ## Getting Started
 To get started  you can simply clone this repository and install the dependencies.
 
-Clone the `ecommerce-demo` repository using git:
+Clone the `Pluto-Update` repository using git:
 
 ```bash
 git clone https://github.com/johmn123-wq/Pluto-Update
 cd Pluto-Update
 ```
-
-
-**Login Details **
-  - Username: Ana 
-  - Password: 786 
-  - http://localhost/oss-vikram/pluto-update/index.html
-
 
 ## Tech Stack
 * HTML, CSS, JS & PHP
