@@ -20,14 +20,14 @@ Here are screenshots that show the E-commerce demo application in use.
 ![](back_images/Screenshot%20(166).png)
 ![](back_images/Screenshot%20(167).png)
 ![](back_images/Screenshot%20(168).png)
----
+
 
 **Item Detail Page**
 ![](back_images/Screenshot%20(151).png)
 ![](back_images/Screenshot%20(152).png)
 ![](back_images/Screenshot%20(153).png)
 
----
+
 
 **Shopping Cart**
 ![](back_images/Screenshot%20(154).png)
@@ -41,7 +41,6 @@ Here are screenshots that show the E-commerce demo application in use.
 
 **Order History**
 ![](back_images/Screenshot%20(159).png)
-
 
 ---
 
