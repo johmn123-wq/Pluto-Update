@@ -14,7 +14,7 @@ The E-commerce demo can be [viewed online here](http://pluto-update.epizy.com/Pl
 
 Here are screenshots that show the E-commerce demo application in use.
 
-**Home Page**
+#Home Page
 ![](back_images/Screenshot%20(150).png)
 ![](back_images/Screenshot%20(163).png)
 ![](back_images/Screenshot%20(166).png)
@@ -23,29 +23,29 @@ Here are screenshots that show the E-commerce demo application in use.
 
 ---
 
-**Item Detail Page**
+#Item Detail Page
 ![](back_images/Screenshot%20(151).png)
 ![](back_images/Screenshot%20(152).png)
 ![](back_images/Screenshot%20(153).png)
 
 ---
 
-**Shopping Cart**
+#Shopping Cart
 ![](back_images/Screenshot%20(154).png)
 
 ---
 
-**Transaction Page**
+#Transaction Page
 ![](back_images/Screenshot%20(156).png)
 ![](back_images/Screenshot%20(158).png)
 ---
 
-**Order History**
+#Order History
 ![](back_images/Screenshot%20(159).png)
 
 ---
 
-**Admin page**
+#Admin page
 ![](back_images/Screenshot%20(171).png)
 ![](back_images/Screenshot%20(172).png)
 ![](back_images/Screenshot%20(173).png)
